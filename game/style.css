@@ -1,0 +1,141 @@
+/* Moonmarket Twins — page styling. Dark gallery wall, warm lantern accents. */
+
+* { box-sizing: border-box; }
+
+body {
+  margin: 0;
+  padding: 18px 20px 26px;
+  background: #14101f;
+  color: #f3ead8;
+  font-family: "Avenir Next", "Segoe UI", Verdana, sans-serif;
+}
+
+.topbar {
+  max-width: 1240px;
+  margin: 0 auto 12px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.brand { display: flex; align-items: center; gap: 12px; }
+.brand-mark { font-size: 40px; color: #f2a541; line-height: 1; }
+.brand h1 { margin: 0; font-size: 27px; letter-spacing: 0.4px; }
+.brand-sub { margin: 2px 0 0; color: #b8a888; font-size: 13px; }
+
+.scene-dots { display: flex; gap: 8px; }
+.scene-dot {
+  background: #241c38;
+  color: #cfc3a6;
+  border: 1px solid #453a63;
+  border-radius: 999px;
+  padding: 7px 16px;
+  font-size: 14px;
+  cursor: pointer;
+}
+.scene-dot.current { background: #f2a541; color: #241708; border-color: #f2a541; font-weight: 700; }
+
+.hud {
+  max-width: 1240px;
+  margin: 0 auto 10px;
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  flex-wrap: wrap;
+}
+.chip {
+  background: #1e1830;
+  border: 1px solid #3a3157;
+  border-radius: 8px;
+  padding: 7px 12px;
+  font-size: 15px;
+  font-variant-numeric: tabular-nums;
+}
+.chip-togo { background: #c9403d; border-color: #c9403d; color: #fff; font-weight: 800; letter-spacing: 0.6px; }
+.hud-spacer { flex: 1; }
+.tool {
+  background: #2b2145;
+  color: #f3ead8;
+  border: 1px solid #55487a;
+  border-radius: 8px;
+  padding: 7px 14px;
+  font-size: 14px;
+  cursor: pointer;
+}
+.tool:hover { background: #372a58; }
+.tool.active { background: #3fa7a0; border-color: #3fa7a0; color: #0c2220; font-weight: 700; }
+
+.scene-head { max-width: 1240px; margin: 0 auto 10px; display: flex; align-items: baseline; gap: 14px; }
+.scene-head h2 { margin: 0; font-size: 21px; color: #ffd98f; }
+.scene-head p { margin: 0; color: #b8a888; font-size: 14px; font-style: italic; }
+
+.pictures {
+  max-width: 1240px;
+  margin: 0 auto;
+  display: flex;
+  gap: 16px;
+  justify-content: center;
+}
+.picture-wrap { margin: 0; }
+.picture-wrap canvas {
+  display: block;
+  width: 600px;
+  height: 450px;
+  border-radius: 10px;
+  border: 2px solid #453a63;
+  box-shadow: 0 12px 32px rgba(0, 0, 0, 0.5);
+  cursor: crosshair;
+  background: #0d0a18;
+}
+.picture-wrap figcaption {
+  text-align: center;
+  margin-top: 7px;
+  font-size: 13px;
+  letter-spacing: 2.5px;
+  text-transform: uppercase;
+  color: #8f83a6;
+}
+
+.message {
+  max-width: 1240px;
+  margin: 14px auto 4px;
+  text-align: center;
+  font-size: 17px;
+  min-height: 22px;
+  color: #ffe9bb;
+}
+.keys { text-align: center; color: #776d8f; font-size: 12.5px; margin: 2px 0 0; }
+
+.overlay {
+  position: fixed;
+  inset: 0;
+  display: none;
+  align-items: center;
+  justify-content: center;
+  background: rgba(10, 7, 20, 0.72);
+  z-index: 10;
+}
+.overlay.visible { display: flex; }
+.panel {
+  background: #1e1830;
+  border: 1px solid #55487a;
+  border-radius: 14px;
+  max-width: 520px;
+  padding: 28px 32px;
+  text-align: center;
+  box-shadow: 0 24px 60px rgba(0, 0, 0, 0.6);
+}
+.panel h2 { margin: 0 0 12px; color: #ffd98f; font-size: 26px; }
+.panel p { line-height: 1.55; color: #e6dcc4; }
+button.big {
+  background: #f2a541;
+  color: #241708;
+  border: none;
+  border-radius: 10px;
+  padding: 12px 28px;
+  font-size: 17px;
+  font-weight: 800;
+  cursor: pointer;
+  margin-top: 8px;
+}
+button.big:hover { background: #ffb84f; }
